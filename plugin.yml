@@ -1,0 +1,6 @@
+name: ShardProofChat
+
+main: io.github.suirad.ShardProofChat
+depend: [Mercury]
+version: 1.0
+author: suirad
