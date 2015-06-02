@@ -13,12 +13,12 @@ public class ChatMessageListener implements Listener {
 	public ChatMessageListener(ShardProofChat plugin) {
 		this.plugin = plugin;
 	}
-//	@EventHandler
-//	public void listenmsg(AsyncPluginBroadcastMessageEvent event){
-//		if (event.getChannel() == "chat"){
-//			Bukkit.getServer().broadcastMessage(event.getMessage());
-//		}
-//	}
+	@EventHandler
+	public void listenmsg(AsyncPluginBroadcastMessageEvent event){
+		if (event.getChannel().equalsIgnoreCase("chat")){
+			Bukkit.getServer().broadcastMessage(event.getMessage());
+		}
+	}
 	@EventHandler
 	public void hookChat(AsyncPlayerChatEvent chat){
 		if (!plugin.active){return;}
